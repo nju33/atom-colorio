@@ -1,0 +1,33 @@
+{
+  "name": "colorio",
+  "main": "./lib/colorio",
+  "version": "0.0.0",
+  "description": "An Atom package that look for color cheat sheet",
+  "keywords": [],
+  "_activationCommands": {
+    "atom-workspace": "Colorio: Toggle"
+  },
+  "repository": "https://github.com/nju33/atom-colorio",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "choo": "^3.3.0",
+    "lodash.debounce": "^4.0.8",
+    "tinycolor2": "^1.4.1",
+    "uniqid": "^4.1.0"
+  },
+  "devDependencies": {
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "space": 2,
+    "envs": [
+      "browser"
+    ],
+    "globals": [
+      "atom"
+    ]
+  }
+}

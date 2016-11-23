@@ -1,0 +1,104 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+@gutter: .5em;
+@easing: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+.reset-list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.colorio__box {
+  width: 43em;
+  height: 100vh;
+  font-size: 10.5px;
+  overflow: auto;
+}
+
+.colorio__form {
+  position: relative;
+  z-index: 1;
+  padding: 1.5em 3rem;
+  text-align: center;
+}
+
+.colorio__input {
+  padding: .5em 1em;
+  font-size: 1.5em;
+  width: 60%;
+  max-width: 300px;
+  background: @background-color-selected;
+  border: 1px solid @base-border-color;
+}
+
+.colorio__section {
+  margin: 1em 0;
+  clear: left;
+}
+
+.colorio__section--inline {
+  float: left;
+  clear: none;
+  display: block;
+  width: 33.33333%;
+}
+
+.colorio__section--inline .colorio__cards {
+  display: block;
+}
+
+.colorio__headline {
+  padding: 0 @gutter;
+}
+
+.colorio__cards {
+  .reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  float: none;
+}
+
+.colorio__card__box {
+  flex: 0 0 33.33333%;
+  box-sizing: border-box;
+  padding: @gutter;
+}
+
+.colorio__card__color {
+  height: 10vh;
+  width: 100%;
+  cursor: pointer;
+}
+
+.colorio__card__data-list {
+  .reset-list;
+  padding: @gutter;
+}
+
+.success-color(@color) when (luminance(@color) >= 50) {
+  color: darken(@background-color-success, 20%);
+}
+.success-color(@color) when (luminance(@color) < 50) {
+  color: lighten(@background-color-success, 20%);
+}
+
+.colorio__card__data-item .icon {
+  &:before {
+    color: lighten(@background-color-selected, 10%);
+    transform: scale(.9);
+    transition: .2s @easing;
+  }
+
+  &:hover:before {
+    color: @text-color-highlight;
+  }
+
+  &--success:before {
+    .success-color(@background-color-selected);
+  }
+}

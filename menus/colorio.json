@@ -1,0 +1,18 @@
+{
+  "context-menu": {
+    "atom-text-editor": [{
+      "label": "Search selection range with Colorio",
+      "command": "Colorio: Search"
+    }]
+  },
+  "menu": [{
+    "label": "Packages",
+    "submenu": [{
+      "label": "colorio",
+      "submenu": [{
+        "label": "Toggle",
+        "command": "Colorio: Toggle"
+      }]
+    }]
+  }]
+}
