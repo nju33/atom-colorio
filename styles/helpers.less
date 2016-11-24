@@ -1,0 +1,21 @@
+.reset-list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dull-color(@color; @per: 10%) when (luminance(@color) >= 50) {
+  color: darken(@color, @per);
+}
+
+.dull-color(@color; @per: 10%) when (luminance(@color) < 50) {
+  color: lighten(@color, @per);
+}
+
+.success-color(@color) when (luminance(@color) >= 50) {
+  color: darken(@background-color-success, 20%);
+}
+
+.success-color(@color) when (luminance(@color) < 50) {
+  color: lighten(@background-color-success, 20%);
+}

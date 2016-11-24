@@ -1,17 +1,6 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
-// for a full listing of what's available.
 @import "ui-variables";
-
-@gutter: .5em;
-@easing: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-
-.reset-list() {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+@import "colorio-variables";
+@import "helpers";
 
 .colorio__box {
   width: 43em;
@@ -34,6 +23,25 @@
   max-width: 300px;
   background: @background-color-selected;
   border: 1px solid @base-border-color;
+
+  &::-webkit-input-placeholder {
+    .dull-color(@background-color-selected, 20%);
+  }
+}
+
+.colorio__history {
+  .reset-list;
+  display: flex;
+  width: 60%;
+  max-width: 300px;
+  padding: 0 2px;
+  margin: 0 auto;
+}
+
+.colorio__history-color {
+  width: .7em;
+  height: .7em;
+  margin-bottom: -.7em;
 }
 
 .colorio__section {
@@ -80,16 +88,9 @@
   padding: @gutter;
 }
 
-.success-color(@color) when (luminance(@color) >= 50) {
-  color: darken(@background-color-success, 20%);
-}
-.success-color(@color) when (luminance(@color) < 50) {
-  color: lighten(@background-color-success, 20%);
-}
-
 .colorio__card__data-item .icon {
   &:before {
-    color: lighten(@background-color-selected, 10%);
+    .dull-color(@background-color-selected);
     transform: scale(.9);
     transition: .2s @easing;
   }
