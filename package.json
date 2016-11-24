@@ -1,7 +1,7 @@
 {
   "name": "colorio",
   "main": "./lib/colorio",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "An Atom package that look for color cheat sheet",
   "keywords": [
     "color",
