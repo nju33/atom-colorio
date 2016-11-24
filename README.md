@@ -4,6 +4,8 @@
 
 An Atom package that look for color cheat sheet
 
+![Atom Colorio](https://github.com/nju33/atom-colorio/blob/master/screenshot.gif?raw=true)
+
 ## Install
 
 ```
