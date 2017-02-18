@@ -9,6 +9,50 @@
   overflow: auto;
 }
 
+.colorio__form-wrapper {
+  position: relative;
+}
+
+.colorio__close-btn {
+  @bg-color: #131313;
+  // .success-bgcolor(@background-color-selected);
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  position: fixed;
+  right: .5em;
+  top: .5em;
+  z-index: 9;
+  width: 2.8em;
+  height: 2.8em;
+  line-height: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -5em;
+    top: -5em;
+    width: 9em;
+    height: 9em;
+    transform: rotate(45deg);
+    display: block;
+    // .success-bgcolor(@background-color-selected);
+    background: @bg-color;
+  }
+
+  & svg {
+    position: relative;
+    left: -1.5px;
+    top: 1.3px;
+    fill: #9da5b4;
+    transition: .2s @easing;
+  }
+
+  &:hover svg {
+    fill: @text-color-highlight;
+  }
+}
+
 .colorio__form {
   position: relative;
   z-index: 1;
