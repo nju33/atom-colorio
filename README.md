@@ -32,3 +32,9 @@ apm install colorio
   Whether to display the hsv value  
 - `Show hsl` default: `false`  
   Whether to display the hsl value  
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2017 nju33 <nju33.ki@gmail.com>
