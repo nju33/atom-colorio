@@ -19,3 +19,11 @@
 .success-color(@color) when (luminance(@color) < 50) {
   color: lighten(@background-color-success, 20%);
 }
+
+.success-bgcolor(@color) when (luminance(@color) >= 50) {
+  background-color: darken(@background-color-success, 20%);
+}
+
+.success-bgcolor(@color) when (luminance(@color) < 50) {
+  background: lighten(@background-color-success, 20%);
+}

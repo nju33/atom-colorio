@@ -1,12 +1,56 @@
 @import "ui-variables";
 @import "colorio-variables";
 @import "helpers";
+@import (less) "libs/nouislider.css";
+@import "custom-nouislider";
 
 .colorio__box {
   width: 43em;
   height: 100vh;
   font-size: 10.5px;
   overflow: auto;
+}
+
+.colorio__form-wrapper {
+  position: relative;
+}
+
+.colorio__close-btn {
+  @bg-color: #131313;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  position: fixed;
+  right: .5em;
+  top: .5em;
+  z-index: 9;
+  width: 2.8em;
+  height: 2.8em;
+  line-height: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -5em;
+    top: -5em;
+    width: 9em;
+    height: 9em;
+    transform: rotate(45deg);
+    display: block;
+    background: @bg-color;
+  }
+
+  & svg {
+    position: relative;
+    left: -1.5px;
+    top: 1.3px;
+    fill: #9da5b4;
+    transition: .2s @easing;
+  }
+
+  &:hover svg {
+    fill: @text-color-highlight;
+  }
 }
 
 .colorio__form {
@@ -42,6 +86,7 @@
   width: .7em;
   height: .7em;
   margin-bottom: -.7em;
+  cursor: pointer;
 }
 
 .colorio__section {
@@ -61,6 +106,7 @@
 }
 
 .colorio__headline {
+  display: inline-block;
   padding: 0 @gutter;
 }
 
@@ -79,6 +125,7 @@
 
 .colorio__card__color {
   height: 10vh;
+  max-height: 4em;
   width: 100%;
   cursor: pointer;
 }

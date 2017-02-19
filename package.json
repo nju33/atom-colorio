@@ -19,6 +19,8 @@
   "dependencies": {
     "choo": "^3.3.0",
     "lodash.debounce": "^4.0.8",
+    "nouislider": "^9.2.0",
+    "octicons": "^5.0.1",
     "tinycolor2": "^1.4.1",
     "uniqid": "^4.1.0"
   },
