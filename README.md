@@ -32,6 +32,8 @@ apm install colorio
   Whether to display the hsv value  
 - `Show hsl` default: `false`  
   Whether to display the hsl value  
+- `Search on copy` default: `false`  
+  If contents are color values when copying, whether to open this
 
 ## License
 
