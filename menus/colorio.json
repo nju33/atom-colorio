@@ -1,7 +1,7 @@
 {
   "context-menu": {
     "atom-text-editor": [{
-      "label": "Search with colorio",
+      "label": "Search with Colorio",
       "command": "Colorio: Search"
     }]
   },
